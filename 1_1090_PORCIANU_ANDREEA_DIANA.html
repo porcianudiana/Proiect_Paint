@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="1_1090_PORCIANU_ANDREEA_DIANA.css">
+    <title>Aplicație Paint</title>
+
+</head>
+<body>
+
+   <div id='container'>
+   <img src="media/brush-stroke.png" style='float: right;' width="30" height="30" />
+   <img src="media/brush-stroke.png" style='float: left;' width="30" height="30" />
+   <p> Click the mouse and hold it so you can draw 
+   
+	</p> 
+   </div>
+ 
+     
+     <div id="colors" class="colors">    
+	    
+     <div class="color-option checked" data-color="black" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="grey" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="red" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="orange" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="yellow" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="green" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="blue" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="purple" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="pink" onclick="selectColor(this)"></div>
+     <div class="color-option" data-color="white" onclick="selectColor(this)"></div>
+	 <label for="colors"><i class="Color"></i> Colors </label>
+	 <button id="fill" class ="fill" onclick="onFill()"><img src="media/bucket.png" height ="20" width="20" /></button>
+	 <button id="eraser" class ="eraser" data-color="white" onclick="selectColor(this)"><img src="media/eraser.png" height ="20" width="20" /></button>
+	 <button class="clear" id="clear">Clear</button>	
+
+      <div class="shapes">
+        <input type="radio" name="shape" value="line" checked="checked">Line
+        <input type="radio" name="shape" value="circle">Circle
+        <input type="radio" name="shape" value="ellipse">Ellipse
+		
+
+     </div>
+	</div>
+	<div id="pen" class="pen">
+    <div id="size-pen" class="size-pen">
+          
+          <input type="range" name="pen_size" id="pen_size" value="8" step="2" min="5" max="50" onchange="ChangeSize(this.value)">
+		  <label for="size_pen"><i class="Pencil"></i> Pen size</label>
+	 
+		 
+	</div>	
+
+   
+ </div>
+  	
+     <a  id="download" download="image.png"><button class="download" type="button" onClick="downloadasPNG()">Download as PNG</button></a>
+	 <a   id="download2" download="image.jpeg"><button class="download2" type="button" onClick="downloadasJPEG()">Download as JPEG</button></a>
+	 <a   id="download3" download="image.svg"><button class="download3" type="button" onClick="downloadasSVG()">Download as SVG</button></a>
+ <div class="board">
+ <canvas id="canvas" width="1000" height="600">
+
+	</canvas>
+ </div>
+ <script src="1_1090_PORCIANU_ANDREEA_DIANA.js"></script>
+</body>
+
+</html>    
